@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Login - Rovex Store</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header class="site-header">
+
     <div class="container header-inner">
 
         <a href="index.html" class="back-btn">
@@ -23,20 +36,46 @@
         </a>
 
         <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="my-order.html">My Order</a>
-            <a href="login.html" class="active">Login</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="my-order.html">
+                My Order
+            </a>
+
+            <a
+                href="login.html"
+                class="active"
+            >
+                Login
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
-    <!-- HERO -->
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
     <section class="page-hero">
+
         <div class="container">
 
             <span class="hero-badge">
@@ -52,17 +91,29 @@
             </p>
 
         </div>
+
     </section>
 
 
-    <!-- AUTH -->
+    <!-- =================================================
+         AUTH SECTION
+    ================================================== -->
+
     <section class="section">
+
         <div class="container">
 
             <div class="auth-wrapper">
 
-                <!-- LOGIN -->
-                <div class="auth-card" id="loginCard">
+
+                <!-- =================================================
+                     LOGIN
+                ================================================== -->
+
+                <div
+                    class="auth-card"
+                    id="loginCard"
+                >
 
                     <div class="auth-icon">
                         🔐
@@ -76,9 +127,12 @@
                         Login to your Rovex Store account
                     </p>
 
+
                     <form id="loginForm">
 
+
                         <div class="form-group">
+
                             <label for="loginEmail">
                                 Email
                             </label>
@@ -89,10 +143,12 @@
                                 placeholder="Enter your email"
                                 required
                             >
+
                         </div>
 
 
                         <div class="form-group">
+
                             <label for="loginPassword">
                                 Password
                             </label>
@@ -103,6 +159,7 @@
                                 placeholder="Enter your password"
                                 required
                             >
+
                         </div>
 
 
@@ -141,7 +198,10 @@
                 </div>
 
 
-                <!-- SIGN UP -->
+                <!-- =================================================
+                     SIGN UP
+                ================================================== -->
+
                 <div
                     class="auth-card"
                     id="signupCard"
@@ -163,7 +223,9 @@
 
                     <form id="signupForm">
 
+
                         <div class="form-group">
+
                             <label for="signupName">
                                 Name
                             </label>
@@ -174,10 +236,12 @@
                                 placeholder="Enter your name"
                                 required
                             >
+
                         </div>
 
 
                         <div class="form-group">
+
                             <label for="signupEmail">
                                 Email
                             </label>
@@ -188,10 +252,12 @@
                                 placeholder="Enter your email"
                                 required
                             >
+
                         </div>
 
 
                         <div class="form-group">
+
                             <label for="signupPassword">
                                 Password
                             </label>
@@ -203,10 +269,12 @@
                                 minlength="6"
                                 required
                             >
+
                         </div>
 
 
                         <div class="form-group">
+
                             <label for="signupConfirmPassword">
                                 Confirm Password
                             </label>
@@ -218,6 +286,7 @@
                                 minlength="6"
                                 required
                             >
+
                         </div>
 
 
@@ -258,10 +327,14 @@
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- BENEFITS -->
+    <!-- =================================================
+         BENEFITS
+    ================================================== -->
+
     <section class="section section-alt">
 
         <div class="container">
@@ -284,6 +357,7 @@
 
 
             <div class="help-grid">
+
 
                 <div class="help-card">
 
@@ -342,7 +416,10 @@
     </section>
 
 
-    <!-- TELEGRAM SUPPORT -->
+    <!-- =================================================
+         TELEGRAM SUPPORT
+    ================================================== -->
+
     <section class="telegram-section">
 
         <div class="container">
@@ -384,16 +461,23 @@
 </main>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
 
     <div class="container">
 
         <div class="footer-inner">
 
+
             <div class="footer-brand">
 
-                <a href="index.html" class="logo">
+                <a
+                    href="index.html"
+                    class="logo"
+                >
                     ROVEX<span>STORE</span>
                 </a>
 
@@ -440,34 +524,57 @@
 </footer>
 
 
-<!-- LOGIN PAGE JAVASCRIPT -->
-<script type="module" src="js/login.js"></script>
+<!-- =====================================================
+     LOGIN PAGE JAVASCRIPT
+===================================================== -->
+
+<script type="module" src="login.js"></script>
+
+
+<!-- =====================================================
+     LOGIN / SIGNUP SWITCH
+===================================================== -->
 
 <script>
 
-    const loginCard = document.getElementById("loginCard");
-    const signupCard = document.getElementById("signupCard");
+    const loginCard =
+        document.getElementById("loginCard");
 
-    const showSignup = document.getElementById("showSignup");
-    const showLogin = document.getElementById("showLogin");
+    const signupCard =
+        document.getElementById("signupCard");
 
+    const showSignup =
+        document.getElementById("showSignup");
 
-    showSignup.addEventListener("click", () => {
-
-        loginCard.style.display = "none";
-        signupCard.style.display = "block";
-
-    });
+    const showLogin =
+        document.getElementById("showLogin");
 
 
-    showLogin.addEventListener("click", () => {
+    showSignup.addEventListener(
+        "click",
+        () => {
 
-        signupCard.style.display = "none";
-        loginCard.style.display = "block";
+            loginCard.style.display = "none";
 
-    });
+            signupCard.style.display = "block";
+
+        }
+    );
+
+
+    showLogin.addEventListener(
+        "click",
+        () => {
+
+            signupCard.style.display = "none";
+
+            loginCard.style.display = "block";
+
+        }
+    );
 
 </script>
+
 
 </body>
 </html>
