@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ROVEX STORE - Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .admin-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 0;
+        }
+
+        .admin-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .admin-user {
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: .8;
+        }
+
+        .access-message {
+            text-align: center;
+            padding: 80px 20px;
+            display: none;
+        }
+
+        .access-message h2 {
+            color: #ff4444;
+            margin-bottom: 15px;
+        }
+
+        .admin-panel {
+            display: none;
+        }
+
+        .price-section {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 15px;
+            background: rgba(255,255,255,.05);
+        }
+
+        .price-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .price-box {
+            padding: 15px;
+            border-radius: 12px;
+            background: rgba(0,0,0,.15);
+        }
+
+        .price-box label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .price-box input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,.2);
+            background: rgba(0,0,0,.25);
+            color: inherit;
+            outline: none;
+        }
+
+        .save-button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .status-message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ROVEX STORE</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="mlbb.html">MLBB</a>
+        <a href="pubg.html">PUBG</a>
+    </nav>
+</header>
+
+
+<div class="admin-container">
+
+    <h1 class="admin-title">ROVEX STORE ADMIN</h1>
+
+    <div class="admin-user" id="adminUser">
+        Checking login...
+    </div>
+
+
+    <!-- ACCESS DENIED -->
+    <div class="access-message" id="accessMessage">
+
+        <h2>Access Denied ❌</h2>
+
+        <p>
+            You don't have permission to access the Admin Panel.
+        </p>
+
+        <p>
+            Only the ROVEX STORE administrator can use this page.
+        </p>
+
+    </div>
+
+
+    <!-- ADMIN PANEL -->
+    <div class="admin-panel" id="adminPanel">
+
+
+        <!-- ================= MLBB ================= -->
+
+        <section class="price-section">
+
+            <h2>🎮 MLBB Diamond</h2>
+
+            <div class="price-grid">
+
+                <div class="price-box">
+                    <label>257 Diamonds</label>
+                    <input id="mlbb_257" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>343 Diamonds</label>
+                    <input id="mlbb_343" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>429 Diamonds</label>
+                    <input id="mlbb_429" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>514 Diamonds</label>
+                    <input id="mlbb_514" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>600 Diamonds</label>
+                    <input id="mlbb_600" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>706 Diamonds</label>
+                    <input id="mlbb_706" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>878 Diamonds</label>
+                    <input id="mlbb_878" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>963 Diamonds</label>
+                    <input id="mlbb_963" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>1049 Diamonds</label>
+                    <input id="mlbb_1049" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>1135 Diamonds</label>
+                    <input id="mlbb_1135" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>1412 Diamonds</label>
+                    <input id="mlbb_1412" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>2195 Diamonds</label>
+                    <input id="mlbb_2195" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>3688 Diamonds</label>
+                    <input id="mlbb_3688" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>5532 Diamonds</label>
+                    <input id="mlbb_5532" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>6598 Diamonds</label>
+                    <input id="mlbb_6598" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>9288 Diamonds</label>
+                    <input id="mlbb_9288" type="number">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WEEKLY PASS ================= -->
+
+        <section class="price-section">
+
+            <h2>🎫 Weekly Pass</h2>
+
+            <div class="price-grid">
+
+                <div class="price-box">
+                    <label>Weekly Pass</label>
+                    <input id="weekly_pass" type="number">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PUBG UC ================= -->
+
+        <section class="price-section">
+
+            <h2>🔫 PUBG UC</h2>
+
+            <div class="price-grid">
+
+                <div class="price-box">
+                    <label>60 UC</label>
+                    <input id="pubg_60" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>120 UC</label>
+                    <input id="pubg_120" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>180 UC</label>
+                    <input id="pubg_180" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>240 UC</label>
+                    <input id="pubg_240" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>325 UC</label>
+                    <input id="pubg_325" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>385 UC</label>
+                    <input id="pubg_385" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>660 UC</label>
+                    <input id="pubg_660" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>720 UC</label>
+                    <input id="pubg_720" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>840 UC</label>
+                    <input id="pubg_840" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>985 UC</label>
+                    <input id="pubg_985" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>1320 UC</label>
+                    <input id="pubg_1320" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>1800 UC</label>
+                    <input id="pubg_1800" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>3800 UC</label>
+                    <input id="pubg_3800" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>8100 UC</label>
+                    <input id="pubg_8100" type="number">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PUBG SPECIAL ================= -->
+
+        <section class="price-section">
+
+            <h2>⭐ PUBG Special Packages</h2>
+
+            <div class="price-grid">
+
+                <div class="price-box">
+                    <label>First Purchase Pack</label>
+                    <input id="pubg_first_purchase" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>Material Pack</label>
+                    <input id="pubg_material_pack" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>Prime 1 Month</label>
+                    <input id="pubg_prime_1_month" type="number">
+                </div>
+
+                <div class="price-box">
+                    <label>Prime Plus 1 Month</label>
+                    <input id="pubg_prime_plus_1_month" type="number">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <button class="save-button" id="savePrices">
+            💾 SAVE ALL PRICES
+        </button>
+
+        <div class="status-message" id="statusMessage"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FIREBASE ================= -->
+
+<script type="module">
+
+import { auth, db } from "./js/firebase.js";
+
+import {
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+import {
+    doc,
+    getDoc,
+    setDoc
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+
+/* ==========================================
+   ADMIN UID
+========================================== */
+
+const ADMIN_UID =
+    "5WxwzHzd2xYFj2K6Crz3LvrSV013";
+
+
+/* ==========================================
+   ELEMENTS
+========================================== */
+
+const adminPanel =
+    document.getElementById("adminPanel");
+
+const accessMessage =
+    document.getElementById("accessMessage");
+
+const adminUser =
+    document.getElementById("adminUser");
+
+const saveButton =
+    document.getElementById("savePrices");
+
+const statusMessage =
+    document.getElementById("statusMessage");
+
+
+/* ==========================================
+   PRICE IDS
+========================================== */
+
+const priceIds = [
+
+    "mlbb_257",
+    "mlbb_343",
+    "mlbb_429",
+    "mlbb_514",
+    "mlbb_600",
+    "mlbb_706",
+    "mlbb_878",
+    "mlbb_963",
+    "mlbb_1049",
+    "mlbb_1135",
+    "mlbb_1412",
+    "mlbb_2195",
+    "mlbb_3688",
+    "mlbb_5532",
+    "mlbb_6598",
+    "mlbb_9288",
+
+    "weekly_pass",
+
+    "pubg_60",
+    "pubg_120",
+    "pubg_180",
+    "pubg_240",
+    "pubg_325",
+    "pubg_385",
+    "pubg_660",
+    "pubg_720",
+    "pubg_840",
+    "pubg_985",
+    "pubg_1320",
+    "pubg_1800",
+    "pubg_3800",
+    "pubg_8100",
+
+    "pubg_first_purchase",
+    "pubg_material_pack",
+    "pubg_prime_1_month",
+    "pubg_prime_plus_1_month"
+
+];
+
+
+/* ==========================================
+   CHECK ADMIN
+========================================== */
+
+function checkAdmin(user) {
+
+    if (!user) {
+
+        adminPanel.style.display = "none";
+
+        accessMessage.style.display = "block";
+
+        adminUser.textContent =
+            "Not logged in";
+
+        return false;
+    }
+
+
+    /* USER UID CHECK */
+
+    if (user.uid !== ADMIN_UID) {
+
+        adminPanel.style.display = "none";
+
+        accessMessage.style.display = "block";
+
+        adminUser.textContent =
+            "Access Denied";
+
+        console.warn(
+            "ROVEX STORE: Unauthorized user",
+            user.uid
+        );
+
+        return false;
+    }
+
+
+    /* ADMIN */
+
+    adminPanel.style.display = "block";
+
+    accessMessage.style.display = "none";
+
+    adminUser.textContent =
+        "Logged in as: " +
+        (user.email || "Admin");
+
+
+    console.log(
+        "ROVEX STORE ADMIN ACCESS GRANTED"
+    );
+
+    console.log(
+        "Admin UID:",
+        user.uid
+    );
+
+    return true;
+}
+
+
+/* ==========================================
+   LOAD PRICES
+========================================== */
+
+async function loadPrices() {
+
+    try {
+
+        const priceRef =
+            doc(db, "products", "prices");
+
+        const priceSnap =
+            await getDoc(priceRef);
+
+
+        if (!priceSnap.exists()) {
+
+            console.log(
+                "No prices found."
+            );
+
+            return;
+        }
+
+
+        const prices =
+            priceSnap.data();
+
+
+        priceIds.forEach(id => {
+
+            const input =
+                document.getElementById(id);
+
+            if (!input) return;
+
+
+            if (
+                prices[id] !== undefined &&
+                prices[id] !== null
+            ) {
+
+                input.value =
+                    prices[id];
+
+            }
+
+        });
+
+
+        /*
+           Weekly Pass compatibility
+           for mlbb.html
+        */
+
+        const weeklyInput =
+            document.getElementById(
+                "weekly_pass"
+            );
+
+
+        if (
+            weeklyInput &&
+            prices.mlbb_weekly_pass !== undefined
+        ) {
+
+            weeklyInput.value =
+                prices.mlbb_weekly_pass;
+
+        }
+
+
+        console.log(
+            "Prices loaded successfully"
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Load prices error:",
+            error
+        );
+
+        statusMessage.textContent =
+            "❌ Failed to load prices";
+
+    }
+
+}
+
+
+/* ==========================================
+   SAVE ALL PRICES
+========================================== */
+
+async function saveAllPrices() {
+
+    saveButton.disabled = true;
+
+    statusMessage.textContent =
+        "Saving prices...";
+
+
+    try {
+
+        const prices = {};
+
+
+        priceIds.forEach(id => {
+
+            const input =
+                document.getElementById(id);
+
+            if (!input) return;
+
+
+            const value =
+                input.value.trim();
+
+
+            prices[id] =
+                value === ""
+                    ? 0
+                    : Number(value);
+
+        });
+
+
+        /*
+           Save Weekly Pass
+           using both IDs
+        */
+
+        prices.mlbb_weekly_pass =
+            prices.weekly_pass;
+
+
+        const priceRef =
+            doc(db, "products", "prices");
+
+
+        await setDoc(
+            priceRef,
+            prices,
+            { merge: true }
+        );
+
+
+        statusMessage.textContent =
+            "✅ All prices saved successfully!";
+
+
+        console.log(
+            "Prices saved:",
+            prices
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Save prices error:",
+            error
+        );
+
+
+        if (
+            error.code ===
+            "permission-denied"
+        ) {
+
+            statusMessage.textContent =
+                "❌ Permission denied. Check Firebase Rules.";
+
+        } else {
+
+            statusMessage.textContent =
+                "❌ Error saving prices.";
+
+        }
+
+    }
+
+
+    saveButton.disabled = false;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+saveButton.addEventListener(
+    "click",
+    saveAllPrices
+);
+
+
+/* ==========================================
+   AUTH STATE
+========================================== */
+
+onAuthStateChanged(
+    auth,
+    async (user) => {
+
+        const isAdmin =
+            checkAdmin(user);
+
+
+        if (isAdmin) {
+
+            await loadPrices();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>

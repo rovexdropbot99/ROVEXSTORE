@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Rovex Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="index.html" class="back-btn">
+            ← Back
+        </a>
+
+        <a href="index.html" class="logo">
+            ROVEX<span>STORE</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="my-order.html">My Order</a>
+            <a href="login.html" class="active">Login</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="hero-badge">
+                ROVEX ACCOUNT
+            </span>
+
+            <h1>
+                Login / Create Account
+            </h1>
+
+            <p>
+                Sign in to manage your Rovex Store orders.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- AUTH -->
+    <section class="section">
+        <div class="container">
+
+            <div class="auth-wrapper">
+
+                <!-- LOGIN -->
+                <div class="auth-card" id="loginCard">
+
+                    <div class="auth-icon">
+                        🔐
+                    </div>
+
+                    <h2>
+                        Welcome Back
+                    </h2>
+
+                    <p class="auth-subtitle">
+                        Login to your Rovex Store account
+                    </p>
+
+                    <form id="loginForm">
+
+                        <div class="form-group">
+                            <label for="loginEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+                        </div>
+
+
+                        <div
+                            id="loginMessage"
+                            class="form-message"
+                        ></div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary auth-submit"
+                        >
+                            Login
+                        </button>
+
+                    </form>
+
+
+                    <div class="auth-switch">
+
+                        <span>
+                            Don't have an account?
+                        </span>
+
+                        <button
+                            type="button"
+                            id="showSignup"
+                            class="text-btn"
+                        >
+                            Create Account
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SIGN UP -->
+                <div
+                    class="auth-card"
+                    id="signupCard"
+                    style="display: none;"
+                >
+
+                    <div class="auth-icon">
+                        👤
+                    </div>
+
+                    <h2>
+                        Create Account
+                    </h2>
+
+                    <p class="auth-subtitle">
+                        Create your Rovex Store account
+                    </p>
+
+
+                    <form id="signupForm">
+
+                        <div class="form-group">
+                            <label for="signupName">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="signupEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="signupPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">
+                                Confirm Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="signupConfirmPassword"
+                                placeholder="Confirm your password"
+                                minlength="6"
+                                required
+                            >
+                        </div>
+
+
+                        <div
+                            id="signupMessage"
+                            class="form-message"
+                        ></div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary auth-submit"
+                        >
+                            Create Account
+                        </button>
+
+                    </form>
+
+
+                    <div class="auth-switch">
+
+                        <span>
+                            Already have an account?
+                        </span>
+
+                        <button
+                            type="button"
+                            id="showLogin"
+                            class="text-btn"
+                        >
+                            Login
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="section section-alt">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    ACCOUNT BENEFITS
+                </span>
+
+                <h2>
+                    Why Create an Account?
+                </h2>
+
+                <p>
+                    Keep your Rovex Store orders organized in one place.
+                </p>
+
+            </div>
+
+
+            <div class="help-grid">
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Track Orders
+                    </h3>
+
+                    <p>
+                        Check your order status anytime.
+                    </p>
+
+                </div>
+
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Faster Checkout
+                    </h3>
+
+                    <p>
+                        Make your future orders easier.
+                    </p>
+
+                </div>
+
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        🔒
+                    </div>
+
+                    <h3>
+                        Secure Account
+                    </h3>
+
+                    <p>
+                        Your account is protected by Firebase Authentication.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TELEGRAM SUPPORT -->
+    <section class="telegram-section">
+
+        <div class="container">
+
+            <div class="telegram-box">
+
+                <div>
+
+                    <span class="section-label">
+                        NEED HELP?
+                    </span>
+
+                    <h2>
+                        Contact Rovex Support
+                    </h2>
+
+                    <p>
+                        Contact us through Telegram if you need help.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://t.me/Sr_Law_1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary"
+                >
+                    Telegram Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    ROVEX<span>STORE</span>
+                </a>
+
+                <p>
+                    Fast and reliable digital products.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="my-order.html">
+                    My Order
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Rovex Store. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- LOGIN PAGE JAVASCRIPT -->
+<script type="module" src="js/login.js"></script>
+
+<script>
+
+    const loginCard = document.getElementById("loginCard");
+    const signupCard = document.getElementById("signupCard");
+
+    const showSignup = document.getElementById("showSignup");
+    const showLogin = document.getElementById("showLogin");
+
+
+    showSignup.addEventListener("click", () => {
+
+        loginCard.style.display = "none";
+        signupCard.style.display = "block";
+
+    });
+
+
+    showLogin.addEventListener("click", () => {
+
+        signupCard.style.display = "none";
+        loginCard.style.display = "block";
+
+    });
+
+</script>
+
+</body>
+</html>

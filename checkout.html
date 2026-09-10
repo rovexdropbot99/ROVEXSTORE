@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout - Rovex Store</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a
+            href="products.html"
+            class="back-btn"
+        >
+            ← Back
+        </a>
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            ROVEX<span>STORE</span>
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="my-order.html">
+                My Order
+            </a>
+
+            <a
+                href="login.html"
+                class="active"
+            >
+                Login
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CHECKOUT HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="hero-badge">
+            SECURE CHECKOUT
+        </span>
+
+        <h1>
+            Complete Your Order
+        </h1>
+
+        <p>
+            Fill in your player information,
+            make the payment and upload your receipt.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CHECKOUT MAIN
+===================================================== -->
+
+<main class="checkout-page">
+
+    <div class="container checkout-layout">
+
+
+        <!-- =================================================
+             LEFT SIDE
+        ================================================= -->
+
+        <div class="checkout-main">
+
+
+            <!-- =================================================
+                 SELECTED PRODUCT
+            ================================================= -->
+
+            <section class="checkout-card">
+
+                <div class="section-title">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Selected Product
+                        </h2>
+
+                        <p>
+                            Review your selected product
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="selected-product-box">
+
+                    <div class="selected-product-icon">
+                        💎
+                    </div>
+
+
+                    <div class="selected-product-info">
+
+                        <span>
+                            PRODUCT
+                        </span>
+
+                        <h3 id="checkoutProductName">
+                            Loading...
+                        </h3>
+
+                        <p>
+                            Category:
+                            <strong id="checkoutCategory">
+                                —
+                            </strong>
+                        </p>
+
+                    </div>
+
+
+                    <div class="selected-product-price">
+
+                        <span>
+                            PRICE
+                        </span>
+
+                        <strong id="checkoutPrice">
+                            — MMK
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-quantity">
+
+                    <span>
+                        Quantity
+                    </span>
+
+                    <strong id="checkoutQuantity">
+                        1
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PLAYER INFORMATION
+            ================================================= -->
+
+            <section class="checkout-card">
+
+                <div class="section-title">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Player Information
+                        </h2>
+
+                        <p>
+                            Enter the correct game account information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="playerId">
+                        Player ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="playerId"
+                        name="playerId"
+                        placeholder="Enter your Player ID"
+                        autocomplete="off"
+                    >
+
+                    <small>
+                        Make sure your Player ID is correct.
+                    </small>
+
+                </div>
+
+
+                <div
+                    class="form-group"
+                    id="serverGroup"
+                >
+
+                    <label for="serverId">
+                        Server ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="serverId"
+                        name="serverId"
+                        placeholder="Enter your Server ID"
+                        autocomplete="off"
+                    >
+
+                    <small>
+                        Required for MLBB orders.
+                    </small>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAYMENT METHOD
+            ================================================= -->
+
+            <section class="checkout-card">
+
+                <div class="section-title">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Payment Method
+                        </h2>
+
+                        <p>
+                            Choose your payment method
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-methods">
+
+
+                    <!-- =========================================
+                         WAVEPAY
+                    ========================================== -->
+
+                    <label class="payment-option active">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="WavePay"
+                            checked
+                        >
+
+
+                        <div class="payment-icon">
+                            W
+                        </div>
+
+
+                        <div class="payment-info">
+
+                            <strong>
+                                WavePay
+                            </strong>
+
+                            <span>
+                                Pay with WavePay
+                            </span>
+
+                        </div>
+
+
+                        <div class="payment-check">
+                            ✓
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- =========================================
+                         WAVEPAY ACCOUNT INFORMATION
+                    ========================================== -->
+
+                    <div
+                        id="wavePayInfo"
+                        class="payment-account-info"
+                    >
+
+                        <div class="payment-account-title">
+
+                            💳 WavePay Payment
+
+                        </div>
+
+
+                        <div class="payment-account-row">
+
+                            <span>
+                                Account Name
+                            </span>
+
+                            <strong>
+                                Sapal Htwe
+                            </strong>
+
+                        </div>
+
+
+                        <div class="payment-account-row">
+
+                            <span>
+                                Phone Number
+                            </span>
+
+                            <strong>
+                                09975062956
+                            </strong>
+
+                        </div>
+
+
+                        <p class="payment-help">
+
+                            Please transfer the exact amount
+                            to this WavePay account and upload
+                            your payment receipt below.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         KBZPAY DISABLED
+                    ========================================== -->
+
+                    <div class="payment-option disabled">
+
+                        <div class="payment-icon">
+                            K
+                        </div>
+
+
+                        <div class="payment-info">
+
+                            <strong>
+                                KBZPay
+                            </strong>
+
+                            <span>
+                                Temporarily unavailable
+                            </span>
+
+                        </div>
+
+
+                        <div class="payment-disabled">
+                            OFF
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         AYA PAY DISABLED
+                    ========================================== -->
+
+                    <div class="payment-option disabled">
+
+                        <div class="payment-icon">
+                            A
+                        </div>
+
+
+                        <div class="payment-info">
+
+                            <strong>
+                                AYA Pay
+                            </strong>
+
+                            <span>
+                                Temporarily unavailable
+                            </span>
+
+                        </div>
+
+
+                        <div class="payment-disabled">
+                            OFF
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECEIPT
+            ================================================= -->
+
+            <section class="checkout-card">
+
+                <div class="section-title">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Payment Receipt
+                        </h2>
+
+                        <p>
+                            Upload your payment screenshot
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="receipt-upload-box">
+
+                    <label
+                        for="receipt"
+                        class="receipt-upload-label"
+                    >
+
+                        <div class="receipt-upload-icon">
+                            📷
+                        </div>
+
+
+                        <strong>
+                            Upload Payment Receipt
+                        </strong>
+
+
+                        <span>
+                            PNG, JPG or JPEG · Max 5MB
+                        </span>
+
+
+                        <span class="receipt-select-text">
+                            Choose Image
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="receipt"
+                        name="receipt"
+                        accept="image/png,image/jpeg,image/jpg,image/webp"
+                        hidden
+                    >
+
+
+                    <!-- =========================================
+                         RECEIPT PREVIEW
+                    ========================================== -->
+
+                    <div
+                        id="receiptPreview"
+                        class="receipt-preview"
+                        hidden
+                    >
+
+                        <div class="receipt-preview-image">
+
+                            <img
+                                id="receiptImage"
+                                src=""
+                                alt="Payment Receipt"
+                            >
+
+                        </div>
+
+
+                        <div class="receipt-preview-info">
+
+                            <strong>
+                                Receipt Selected
+                            </strong>
+
+                            <span id="receiptFileName">
+                                Receipt
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="removeReceipt"
+                            class="remove-receipt"
+                        >
+                            Remove
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ORDER NOTE
+            ================================================= -->
+
+            <section class="checkout-card">
+
+                <div class="section-title">
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Order Note
+                        </h2>
+
+                        <p>
+                            Optional message for your order
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="orderNote">
+                        Note
+                    </label>
+
+                    <textarea
+                        id="orderNote"
+                        name="orderNote"
+                        rows="4"
+                        placeholder="Write an optional note..."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MESSAGE
+            ================================================= -->
+
+            <div
+                id="checkoutMessage"
+                class="checkout-message"
+                hidden
+            ></div>
+
+
+
+            <!-- =================================================
+                 PLACE ORDER
+            ================================================= -->
+
+            <button
+                type="button"
+                id="placeOrderBtn"
+                class="primary-btn checkout-submit-btn"
+            >
+
+                <span>
+                    ✓
+                </span>
+
+                Place Order
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             RIGHT SIDEBAR
+        ================================================= -->
+
+        <aside class="checkout-sidebar">
+
+
+            <!-- =================================================
+                 ORDER SUMMARY
+            ================================================= -->
+
+            <div class="checkout-summary-card">
+
+                <div class="summary-header">
+
+                    <span>
+                        ORDER SUMMARY
+                    </span>
+
+                    <span class="summary-lock">
+                        🔒
+                    </span>
+
+                </div>
+
+
+                <div class="summary-product">
+
+                    <div class="summary-product-icon">
+                        💎
+                    </div>
+
+
+                    <div>
+
+                        <strong id="summaryProduct">
+                            Loading...
+                        </strong>
+
+                        <span id="summaryCategory">
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Quantity
+                    </span>
+
+                    <strong id="summaryQuantity">
+                        1
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="summaryTotal">
+                        — MMK
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-note">
+
+                    🔐 Your order will be saved
+                    securely.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ORDER PROCESS
+            ================================================= -->
+
+            <div class="process-card">
+
+                <h3>
+                    Order Process
+                </h3>
+
+
+                <div class="process-step">
+
+                    <span>
+                        1
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Place Order
+                        </strong>
+
+                        <p>
+                            Submit your order
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-step">
+
+                    <span>
+                        2
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Payment Review
+                        </strong>
+
+                        <p>
+                            We check your receipt
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-step">
+
+                    <span>
+                        3
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Order Complete
+                        </strong>
+
+                        <p>
+                            Your order becomes Done
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUPPORT
+            ================================================= -->
+
+            <div class="checkout-support-card">
+
+                <div class="support-icon">
+                    💬
+                </div>
+
+
+                <h3>
+                    Need Help?
+                </h3>
+
+
+                <p>
+                    Contact us on Telegram if you
+                    have any questions about your order.
+                </p>
+
+
+                <a
+                    href="https://t.me/Sr_Law_1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="secondary-btn"
+                >
+                    Telegram Support
+                </a>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    ROVEX<span>STORE</span>
+                </a>
+
+                <p>
+                    Fast and reliable digital products
+                    and game top-up service.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="my-order.html">
+                    My Order
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Support
+                </h4>
+
+                <a
+                    href="https://t.me/Sr_Law_1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Telegram
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Rovex Store. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script
+    type="module"
+    src="js/checkout.js"
+></script>
+
+
+</body>
+
+</html>
